@@ -1,0 +1,27 @@
+.logo {
+  display: inline-block;
+
+  font-family: var(--secondary-font);
+  @include fonts(26px, var(--accent-color), 700, calc(31 / 26));
+
+  &--theme-light {
+    color: var(--logo-dark-font-color);
+
+    @include transition(color);
+
+    .logo:hover &,
+    .logo:focus & {
+      color: var(--accent-color);
+    }
+  }
+  &--theme-dark {
+    color: var(--main-light-color);
+
+    @include transition(color);
+
+    .logo:hover &,
+    .logo:focus & {
+      color: var(--accent-color);
+    }
+  }
+}

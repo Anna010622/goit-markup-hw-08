@@ -1,0 +1,39 @@
+.features {
+  @include section;
+}
+
+.features__list {
+  display: flex;
+}
+
+.features__element {
+  flex-basis: calc((100% - 90px) / 4);
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.features__thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 120px;
+  margin-bottom: 30px;
+
+  border-radius: 4px;
+  background-color: var(--light-bg-color);
+}
+
+.features__title {
+  margin-bottom: 10px;
+
+  @include fonts(inherit, var(--title-color), false, calc(16 / 14), inherit);
+
+  text-transform: uppercase;
+}
+
+.features__text {
+  line-height: 1.71;
+}

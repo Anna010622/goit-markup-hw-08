@@ -1,0 +1,39 @@
+.nav {
+  @include fonts(false, var(--title-color), 500, calc(16 / 14), 0.02em);
+}
+.nav__list {
+  display: flex;
+  gap: 50px;
+}
+.nav__link {
+  position: relative;
+  display: inline-block;
+
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  @include transition(color);
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+
+    height: 4px;
+    width: 100%;
+
+    background-color: var(--accent-color);
+    border-radius: 2px;
+
+    opacity: 0;
+  }
+
+  &--current {
+    color: var(--accent-color);
+    &::after {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.header {
+  align-items: center;
+  background-color: var(--main-light-color);
+  border-bottom: 1px solid var(--heder-bordered);
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+}
+.header__logo {
+  margin-right: 93px;
+}
+.header__nav {
+  margin-right: auto;
+}
+.header__link {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+.header__contacts {
+  display: flex;
+  gap: 30px;
+
+  @include fonts(false, var(--base-text-color), 500, calc(16 / 14), 00.02em);
+}
+.header__icon {
+  fill: currentColor;
+}

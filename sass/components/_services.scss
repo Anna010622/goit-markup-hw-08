@@ -1,0 +1,31 @@
+.services {
+  @include section(0, 94px);
+}
+.services__section-title {
+  margin-bottom: 50px;
+}
+.services__list {
+  display: flex;
+  gap: 30px;
+}
+
+.services__item {
+  position: relative;
+}
+.services__label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+
+  background-color: rgba(47, 48, 58, 0.8);
+}
+.services__text {
+  padding-top: 27px;
+  padding-bottom: 27px;
+
+  @include fonts(false, var(--main-light-color), 700, calc(16 / 14));
+  text-align: center;
+  text-transform: uppercase;
+}

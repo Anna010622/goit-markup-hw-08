@@ -1,0 +1,55 @@
+.card {
+  @include transition(box-shadow);
+
+  &:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.card__thumb {
+  position: relative;
+  overflow: hidden;
+}
+.card__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(33, 150, 243, 0.9);
+  backdrop-filter: blur(2px);
+
+  opacity: 0;
+  transform: translateY(100%);
+
+  @include transition(transform, opacity);
+
+  .card:hover & {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card__description {
+  padding: 63px 24px;
+
+  @include fonts(18px, var(--main-light-color), false, calc(28 / 18), false);
+}
+
+.card__inner {
+  padding: 20px 24px;
+  border: 1px solid var(--sections-bordered);
+  border-top: none;
+}
+.card__title {
+  margin-bottom: 4px;
+
+  @include fonts(18px, var(--title-color), false, calc(36 / 18), 0.06em);
+}
+.card__text {
+  font-size: 16px;
+  line-height: 1.88;
+}
