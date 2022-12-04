@@ -1,8 +1,16 @@
 .services {
-  @include section(0, 94px);
+  @media screen and (max-width: 1199.98px) {
+    display: none;
+  }
+
+  @include section(0, 90px);
 }
 .services__section-title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 .services__list {
   display: flex;

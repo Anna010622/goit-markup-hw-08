@@ -1,6 +1,11 @@
 .button {
   min-width: 200px;
-  padding: 10px 32px;
+  padding: 10px 24px;
+
+  @media screen and (min-width: 1200px) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 
   @include fonts(16px, var(--main-light-color), 700, calc(30 / 16), 0.06em);
   text-align: center;

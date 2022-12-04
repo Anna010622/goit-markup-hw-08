@@ -1,5 +1,9 @@
 .nav {
   @include fonts(false, var(--title-color), 500, calc(16 / 14), 0.02em);
+
+  @media screen and(max-width:767.98px) {
+    display: none;
+  }
 }
 .nav__list {
   display: flex;

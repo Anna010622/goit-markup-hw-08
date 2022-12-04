@@ -1,16 +1,32 @@
 .clients {
   @include section;
+  @media screen and(min-width:1200px) {
+    @include section(90px, 90px);
+  }
 }
 .clients__section-title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 .clients__list {
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
 }
 .clients__element {
-  flex-basis: calc((100% - 30px * 5) / 6);
+  flex-basis: calc((100% - 1 * 30px) / 2);
+
+  @media screen and(min-width:768px) {
+    flex-basis: calc((100% - 2 * 30px) / 3);
+  }
+  @media screen and(min-width: 1200px) {
+    flex-basis: calc((100% - 5 * 30px) / 6);
+  }
 }
+
 .clients__link {
   display: flex;
   justify-content: center;

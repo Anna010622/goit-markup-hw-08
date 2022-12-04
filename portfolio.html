@@ -25,6 +25,15 @@
         <a class="header__logo logo" href="./index.html" lang="en"
           >Web<span class="logo--theme-light">Studio</span></a
         >
+        <button
+          class="header__button menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="" width="" height="">
+            <use href="./images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
         <nav class="header__nav nav">
           <ul class="nav__list">
             <li class="nav__item">
@@ -86,12 +95,66 @@
           <ul class="portfolio__cards">
             <li class="card portfolio__card">
               <div class="card__thumb">
-                <img
-                  src="./images/portfolio/img1.jpg"
-                  alt="екран ноутбука"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <!-- Desktop screen -->
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="
+                      ./images/portfolio/desk/img-1_desk@1x.webp 1x,
+                      ./images/portfolio/desk/img-1_desk@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="
+                      ./images/portfolio/desk/img-1_desk@1x.jpg 1x,
+                      ./images/portfolio/desk/img-1_desk@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <!-- Tablet screen -->
+                  <source
+                    media="(min-width:768px)"
+                    srcset="
+                      ./images/portfolio/tab/img-1_tab@1x.webp 1x,
+                      ./images/portfolio/tab/img-1_tab@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:768px)"
+                    srcset="
+                      ./images/portfolio/tab/img-1_tab@1x.jpg 1x,
+                      ./images/portfolio/tab/img-1_tab@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <!-- Mobile screen -->
+                  <source
+                    media="(max-width:767.98px)"
+                    srcset="
+                      ./images/portfolio/mob/img-1_mob@1x.webp 1x,
+                      ./images/portfolio/mob/img-1_mob@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(max-width:767.98px)"
+                    srcset="
+                      ./images/portfolio/mob/img-1_mob@1x.jpg 1x,
+                      ./images/portfolio/mob/img-1_mob@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+
+                  <img
+                    src="./images/portfolio/mob/img-1_mob@1x.jpg"
+                    alt="екран ноутбука"
+                    loading="lazy"
+                  />
+                </picture>
+
                 <div class="card__overlay">
                   <p class="card__description">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -107,12 +170,66 @@
             </li>
             <li class="card portfolio__card">
               <div class="card__thumb">
-                <img
-                  src="./images/portfolio/img2.jpg"
-                  alt="два баскетболіста"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <!-- Desktop screen -->
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="
+                      ./images/portfolio/desk/img-2_desk@1x.webp 1x,
+                      ./images/portfolio/desk/img-2_desk@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="
+                      ./images/portfolio/desk/img-2_desk@1x.jpg 1x,
+                      ./images/portfolio/desk/img-2_desk@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <!-- Tablet screen -->
+                  <source
+                    media="(min-width:768px)"
+                    srcset="
+                      ./images/portfolio/tab/img-2_tab@1x.webp 1x,
+                      ./images/portfolio/tab/img-2_tab@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:768px)"
+                    srcset="
+                      ./images/portfolio/tab/img-2_tab@1x.jpg 1x,
+                      ./images/portfolio/tab/img-2_tab@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <!-- Mobile screen -->
+                  <source
+                    media="(max-width:767.98px)"
+                    srcset="
+                      ./images/portfolio/mob/img-2_mob@1x.webp 1x,
+                      ./images/portfolio/mob/img-2_mob@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(max-width:767.98px)"
+                    srcset="
+                      ./images/portfolio/mob/img-2_mob@1x.jpg 1x,
+                      ./images/portfolio/mob/img-2_mob@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+
+                  <img
+                    src="./images/portfolio/mob/img-2_mob@1x.jpg"
+                    alt="два баскетболіста"
+                    loading="lazy"
+                  />
+                </picture>
+
                 <div class="card__overlay">
                   <p class="card__description">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -121,6 +238,7 @@
                   </p>
                 </div>
               </div>
+
               <div class="card__inner">
                 <h2 class="card__title">Постер <span lang="en">New Orlean vs Golden Star</span></h2>
                 <p class="card__text">Дизайн</p>
@@ -128,12 +246,66 @@
             </li>
             <li class="card portfolio__card">
               <div class="card__thumb">
-                <img
-                  src="./images/portfolio/img3.jpg"
-                  alt="логотип ресторану"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <!-- Desktop screen -->
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="
+                      ./images/portfolio/desk/img-3_desk@1x.webp 1x,
+                      ./images/portfolio/desk/img-3_desk@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="
+                      ./images/portfolio/desk/img-3_desk@1x.jpg 1x,
+                      ./images/portfolio/desk/img-3_desk@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <!-- Tablet screen -->
+                  <source
+                    media="(min-width:768px)"
+                    srcset="
+                      ./images/portfolio/tab/img-3_tab@1x.webp 1x,
+                      ./images/portfolio/tab/img-3_tab@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:768px)"
+                    srcset="
+                      ./images/portfolio/tab/img-3_tab@1x.jpg 1x,
+                      ./images/portfolio/tab/img-3_tab@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <!-- Mobile screen -->
+                  <source
+                    media="(max-width:767.98px)"
+                    srcset="
+                      ./images/portfolio/mob/img-3_mob@1x.webp 1x,
+                      ./images/portfolio/mob/img-3_mob@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(max-width:767.98px)"
+                    srcset="
+                      ./images/portfolio/mob/img-3_mob@1x.jpg 1x,
+                      ./images/portfolio/mob/img-3_mob@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+
+                  <img
+                    src="./images/portfolio/mob/img-3_mob@1x.jpg"
+                    alt="логотип ресторану"
+                    loading="lazy"
+                  />
+                </picture>
+
                 <div class="card__overlay">
                   <p class="card__description">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -149,7 +321,65 @@
             </li>
             <li class="card portfolio__card">
               <div class="card__thumb">
-                <img src="./images/portfolio/img4.jpg" alt="навушники" width="370" height="294" />
+                <picture>
+                  <!-- Desktop screen -->
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="
+                      ./images/portfolio/desk/img-4_desk@1x.webp 1x,
+                      ./images/portfolio/desk/img-4_desk@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="
+                      ./images/portfolio/desk/img-4_desk@1x.jpg 1x,
+                      ./images/portfolio/desk/img-4_desk@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <!-- Tablet screen -->
+                  <source
+                    media="(min-width:768px)"
+                    srcset="
+                      ./images/portfolio/tab/img-4_tab@1x.webp 1x,
+                      ./images/portfolio/tab/img-4_tab@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:768px)"
+                    srcset="
+                      ./images/portfolio/tab/img-4_tab@1x.jpg 1x,
+                      ./images/portfolio/tab/img-4_tab@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <!-- Mobile screen -->
+                  <source
+                    media="(max-width:767.98px)"
+                    srcset="
+                      ./images/portfolio/mob/img-4_mob@1x.webp 1x,
+                      ./images/portfolio/mob/img-4_mob@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(max-width:767.98px)"
+                    srcset="
+                      ./images/portfolio/mob/img-4_mob@1x.jpg 1x,
+                      ./images/portfolio/mob/img-4_mob@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+
+                  <img
+                    src="./images/portfolio/mob/img-4_mob@1x.jpg"
+                    alt="навушники"
+                    loading="lazy"
+                  />
+                </picture>
                 <div class="card__overlay">
                   <p class="card__description">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -165,7 +395,65 @@
             </li>
             <li class="card portfolio__card">
               <div class="card__thumb">
-                <img src="./images/portfolio/img5.jpg" alt="дві коробки" width="370" height="294" />
+                <picture>
+                  <!-- Desktop screen -->
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="
+                      ./images/portfolio/desk/img-5_desk@1x.webp 1x,
+                      ./images/portfolio/desk/img-5_desk@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="
+                      ./images/portfolio/desk/img-5_desk@1x.jpg 1x,
+                      ./images/portfolio/desk/img-5_desk@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <!-- Tablet screen -->
+                  <source
+                    media="(min-width:768px)"
+                    srcset="
+                      ./images/portfolio/tab/img-5_tab@1x.webp 1x,
+                      ./images/portfolio/tab/img-5_tab@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:768px)"
+                    srcset="
+                      ./images/portfolio/tab/img-5_tab@1x.jpg 1x,
+                      ./images/portfolio/tab/img-5_tab@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <!-- Mobile screen -->
+                  <source
+                    media="(max-width:767.98px)"
+                    srcset="
+                      ./images/portfolio/mob/img-5_mob@1x.webp 1x,
+                      ./images/portfolio/mob/img-5_mob@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(max-width:767.98px)"
+                    srcset="
+                      ./images/portfolio/mob/img-5_mob@1x.jpg 1x,
+                      ./images/portfolio/mob/img-5_mob@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+
+                  <img
+                    src="./images/portfolio/mob/img-5_mob@1x.jpg"
+                    alt="дві коробки"
+                    loading="lazy"
+                  />
+                </picture>
                 <div class="card__overlay">
                   <p class="card__description">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -181,12 +469,66 @@
             </li>
             <li class="card portfolio__card">
               <div class="card__thumb">
-                <img
-                  src="./images/portfolio/img6.jpg"
-                  alt="монітор комп'ютера"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <!-- Desktop screen -->
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="
+                      ./images/portfolio/desk/img-6_desk@1x.webp 1x,
+                      ./images/portfolio/desk/img-6_desk@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="
+                      ./images/portfolio/desk/img-6_desk@1x.jpg 1x,
+                      ./images/portfolio/desk/img-6_desk@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <!-- Tablet screen -->
+                  <source
+                    media="(min-width:768px)"
+                    srcset="
+                      ./images/portfolio/tab/img-6_tab@1x.webp 1x,
+                      ./images/portfolio/tab/img-6_tab@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:768px)"
+                    srcset="
+                      ./images/portfolio/tab/img-6_tab@1x.jpg 1x,
+                      ./images/portfolio/tab/img-6_tab@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <!-- Mobile screen -->
+                  <source
+                    media="(max-width:767.98px)"
+                    srcset="
+                      ./images/portfolio/mob/img-6_mob@1x.webp 1x,
+                      ./images/portfolio/mob/img-6_mob@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(max-width:767.98px)"
+                    srcset="
+                      ./images/portfolio/mob/img-6_mob@1x.jpg 1x,
+                      ./images/portfolio/mob/img-6_mob@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+
+                  <img
+                    src="./images/portfolio/mob/img-6_mob@1x.jpg"
+                    alt="монітор комп'ютера"
+                    loading="lazy"
+                  />
+                </picture>
+
                 <div class="card__overlay">
                   <p class="card__description">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -202,7 +544,62 @@
             </li>
             <li class="card portfolio__card">
               <div class="card__thumb">
-                <img src="./images/portfolio/img7.jpg" alt="журнал" width="370" height="294" />
+                <picture>
+                  <!-- Desktop screen -->
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="
+                      ./images/portfolio/desk/img-7_desk@1x.webp 1x,
+                      ./images/portfolio/desk/img-7_desk@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="
+                      ./images/portfolio/desk/img-7_desk@1x.jpg 1x,
+                      ./images/portfolio/desk/img-7_desk@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <!-- Tablet screen -->
+                  <source
+                    media="(min-width:768px)"
+                    srcset="
+                      ./images/portfolio/tab/img-7_tab@1x.webp 1x,
+                      ./images/portfolio/tab/img-7_tab@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:768px)"
+                    srcset="
+                      ./images/portfolio/tab/img-7_tab@1x.jpg 1x,
+                      ./images/portfolio/tab/img-7_tab@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <!-- Mobile screen -->
+                  <source
+                    media="(max-width:767.98px)"
+                    srcset="
+                      ./images/portfolio/mob/img-7_mob@1x.webp 1x,
+                      ./images/portfolio/mob/img-7_mob@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(max-width:767.98px)"
+                    srcset="
+                      ./images/portfolio/mob/img-7_mob@1x.jpg 1x,
+                      ./images/portfolio/mob/img-7_mob@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+
+                  <img src="./images/portfolio/mob/img-7_mob@1x.jpg" alt="журнал" loading="lazy" />
+                </picture>
+
                 <div class="card__overlay">
                   <p class="card__description">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -218,7 +615,62 @@
             </li>
             <li class="card portfolio__card">
               <div class="card__thumb">
-                <img src="./images/portfolio/img8.jpg" alt="бірка" width="370" height="294" />
+                <picture>
+                  <!-- Desktop screen -->
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="
+                      ./images/portfolio/desk/img-8_desk@1x.webp 1x,
+                      ./images/portfolio/desk/img-8_desk@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="
+                      ./images/portfolio/desk/img-8_desk@1x.jpg 1x,
+                      ./images/portfolio/desk/img-8_desk@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <!-- Tablet screen -->
+                  <source
+                    media="(min-width:768px)"
+                    srcset="
+                      ./images/portfolio/tab/img-8_tab@1x.webp 1x,
+                      ./images/portfolio/tab/img-8_tab@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:768px)"
+                    srcset="
+                      ./images/portfolio/tab/img-8_tab@1x.jpg 1x,
+                      ./images/portfolio/tab/img-8_tab@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <!-- Mobile screen -->
+                  <source
+                    media="(max-width:767.98px)"
+                    srcset="
+                      ./images/portfolio/mob/img-8_mob@1x.webp 1x,
+                      ./images/portfolio/mob/img-8_mob@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(max-width:767.98px)"
+                    srcset="
+                      ./images/portfolio/mob/img-8_mob@1x.jpg 1x,
+                      ./images/portfolio/mob/img-8_mob@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+
+                  <img src="./images/portfolio/mob/img-8_mob@1x.jpg" alt="бірка" loading="lazy" />
+                </picture>
+
                 <div class="card__overlay">
                   <p class="card__description">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -234,7 +686,62 @@
             </li>
             <li class="card portfolio__card">
               <div class="card__thumb">
-                <img src="./images/portfolio/img9.jpg" alt="ноутбук" width="370" height="294" />
+                <picture>
+                  <!-- Desktop screen -->
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="
+                      ./images/portfolio/desk/img-9_desk@1x.webp 1x,
+                      ./images/portfolio/desk/img-9_desk@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:1200px)"
+                    srcset="
+                      ./images/portfolio/desk/img-9_desk@1x.jpg 1x,
+                      ./images/portfolio/desk/img-9_desk@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <!-- Tablet screen -->
+                  <source
+                    media="(min-width:768px)"
+                    srcset="
+                      ./images/portfolio/tab/img-9_tab@1x.webp 1x,
+                      ./images/portfolio/tab/img-9_tab@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(min-width:768px)"
+                    srcset="
+                      ./images/portfolio/tab/img-9_tab@1x.jpg 1x,
+                      ./images/portfolio/tab/img-9_tab@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <!-- Mobile screen -->
+                  <source
+                    media="(max-width:767.98px)"
+                    srcset="
+                      ./images/portfolio/mob/img-9_mob@1x.webp 1x,
+                      ./images/portfolio/mob/img-9_mob@2x.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    media="(max-width:767.98px)"
+                    srcset="
+                      ./images/portfolio/mob/img-9_mob@1x.jpg 1x,
+                      ./images/portfolio/mob/img-9_mob@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+
+                  <img src="./images/portfolio/mob/img-9_mob@1x.jpg" alt="ноутбук" loading="lazy" />
+                </picture>
+
                 <div class="card__overlay">
                   <p class="card__description">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -363,5 +870,60 @@
         </div>
       </div>
     </footer>
+
+    <!-- Mobile menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle js-close-menu">
+        <svg class="" width="40" height="40">
+          <use href="./images/icons.svg#icon-menu-close"></use>
+        </svg>
+      </button>
+      <div class="mobile-menu">
+        <ul class="mobile-menu__nav">
+          <li class="mobil-menu__item">
+            <a class="mobile-menu__nav-link" href="./index.html">Студія</a>
+          </li>
+          <li class="mobil-menu__item">
+            <a class="mobile-menu__nav-link mobile-menu__nav-link--current" href="./portfolio.html"
+              >Портфоліо</a
+            >
+          </li>
+          <li class="mobil-menu__item">
+            <a class="mobile-menu__nav-link" href="./portfolio.html">Контакти</a>
+          </li>
+        </ul>
+
+        <ul class="mobil-menu__contacts">
+          <li class="mobil-menu__item">
+            <a class="mobil-menu__tel" href="tel:+380961111111">+38 096 111 11 11</a>
+          </li>
+          <li class="mobil-menu__item">
+            <a class="mobil-menu__mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
+          </li>
+        </ul>
+        <ul class="mobil-menu__social-links">
+          <li class="mobil-menu__social-item">
+            <a class="mobil-menu__social-link" href="">Instagram</a>
+          </li>
+          <li class="mobil-menu__social-item">
+            <a class="mobil-menu__social-link" href="">Twitter</a>
+          </li>
+          <li class="mobil-menu__social-item">
+            <a class="mobil-menu__social-link" href="">Facebook</a>
+          </li>
+          <li class="mobil-menu__social-item">
+            <a class="mobil-menu__social-link" href="">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>

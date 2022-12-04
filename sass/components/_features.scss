@@ -1,16 +1,26 @@
 .features {
   @include section;
+  @media screen and(min-width:1200px) {
+    @include section(90px, 90px);
+  }
 }
 
 .features__list {
-  display: flex;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
 }
 
 .features__element {
-  flex-basis: calc((100% - 90px) / 4);
+  flex-basis: 100%;
 
-  &:not(:last-child) {
-    margin-right: 30px;
+  @media screen and(min-width:768px) {
+    flex-basis: calc((100% - 1 * 30px) / 2);
+  }
+  @media screen and(min-width: 1200px) {
+    flex-basis: calc((100% - 3 * 30px) / 4);
   }
 }
 
@@ -32,6 +42,9 @@
   @include fonts(inherit, var(--title-color), false, calc(16 / 14), inherit);
 
   text-transform: uppercase;
+  @media screen and (max-width: 767.98px) {
+    text-align: center;
+  }
 }
 
 .features__text {

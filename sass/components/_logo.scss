@@ -2,7 +2,12 @@
   display: inline-block;
 
   font-family: var(--secondary-font);
-  @include fonts(26px, var(--accent-color), 700, calc(31 / 26));
+  @include fonts(24px, var(--accent-color), 700, calc(28 / 24));
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: calc(31 / 26);
+  }
 
   &--theme-light {
     color: var(--logo-dark-font-color);
