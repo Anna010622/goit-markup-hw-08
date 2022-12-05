@@ -1,4 +1,8 @@
 .section-title {
-  @include fonts(36px, var(--title-color), false, calc(42 / 36), inherit);
+  @include fonts(28px, var(--title-color), false, calc(33 / 28), false);
   text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+  }
 }

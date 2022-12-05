@@ -133,11 +133,15 @@ body {
 }
 
 .section-title {
-  font-size: 36px;
+  font-size: 28px;
   color: var(--title-color);
-  line-height: 1.1666666667;
-  letter-spacing: inherit;
+  line-height: 1.1785714286;
   text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .section-title {
+    font-size: 36px;
+  }
 }
 
 .button {
@@ -248,8 +252,8 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .features {
-    padding-top: 90px;
-    padding-bottom: 90px;
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 
@@ -317,7 +321,7 @@ body {
 
 .services {
   padding-top: 0;
-  padding-bottom: 90px;
+  padding-bottom: 94px;
 }
 @media screen and (max-width: 1199.98px) {
   .services {
@@ -370,8 +374,8 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .team {
-    padding-top: 90px;
-    padding-bottom: 90px;
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 
@@ -488,8 +492,8 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .clients {
-    padding-top: 90px;
-    padding-bottom: 90px;
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 
@@ -572,8 +576,8 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .portfolio {
-    padding-top: 90px;
-    padding-bottom: 90px;
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }
 
@@ -716,6 +720,7 @@ body {
 }
 
 .card__inner {
+  height: calc(100% - 294px);
   padding: 20px 24px;
   border: 1px solid var(--sections-bordered);
   border-top: none;
@@ -1236,6 +1241,8 @@ body {
           align-items: center;
   padding-top: 5px;
   padding-bottom: 5px;
+  font-size: 12px;
+  line-height: 1.1666666667;
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 250ms;
@@ -1250,6 +1257,8 @@ body {
   .header__link {
     padding-top: 32px;
     padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.1428571429;
   }
 }
 

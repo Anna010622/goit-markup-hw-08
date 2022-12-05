@@ -1,7 +1,7 @@
 .features {
   @include section;
   @media screen and(min-width:1200px) {
-    @include section(90px, 90px);
+    @include section(94px, 94px);
   }
 }
 

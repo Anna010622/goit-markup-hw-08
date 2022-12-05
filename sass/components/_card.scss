@@ -40,6 +40,7 @@
 }
 
 .card__inner {
+  height: calc(100% - 294px);
   padding: 20px 24px;
   border: 1px solid var(--sections-bordered);
   border-top: none;
