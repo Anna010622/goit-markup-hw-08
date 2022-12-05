@@ -720,10 +720,14 @@ body {
 }
 
 .card__inner {
-  height: calc(100% - 294px);
   padding: 20px 24px;
   border: 1px solid var(--sections-bordered);
   border-top: none;
+}
+@media screen and (min-width: 768px) {
+  .card__inner {
+    height: calc(100% - 294px);
+  }
 }
 
 .card__title {
