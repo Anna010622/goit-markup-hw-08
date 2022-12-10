@@ -664,6 +664,13 @@ body {
 }
 
 .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-transition-property: -webkit-box-shadow;
   transition-property: -webkit-box-shadow;
   transition-property: box-shadow;
@@ -721,11 +728,9 @@ body {
   padding: 20px 24px;
   border: 1px solid var(--sections-bordered);
   border-top: none;
-}
-@media screen and (min-width: 768px) {
-  .card__inner {
-    height: calc(100% - 294px);
-  }
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .card__title {

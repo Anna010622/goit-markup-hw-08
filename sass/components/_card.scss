@@ -1,4 +1,7 @@
 .card {
+  display: flex;
+  flex-direction: column;
+
   @include transition(box-shadow);
 
   &:hover {
@@ -44,9 +47,7 @@
   border: 1px solid var(--sections-bordered);
   border-top: none;
 
-  @media screen and (min-width: 768px) {
-    height: calc(100% - 294px);
-  }
+  flex-grow: 1;
 }
 .card__title {
   margin-bottom: 4px;
