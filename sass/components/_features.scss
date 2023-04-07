@@ -1,50 +1,50 @@
 .features {
-  @include section;
-  @media screen and(min-width:1200px) {
-    @include section(94px, 94px);
-  }
+	@include section;
+	@media screen and (min-width: 1200px) {
+		@include section(94px, 94px);
+	}
 }
 
 .features__list {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
+	display: flex;
+	gap: 30px;
+	flex-wrap: wrap;
 }
 
 .features__element {
-  flex-basis: 100%;
+	flex-basis: 100%;
 
-  @media screen and(min-width:768px) {
-    flex-basis: calc((100% - 1 * 30px) / 2);
-  }
-  @media screen and(min-width: 1200px) {
-    flex-basis: calc((100% - 3 * 30px) / 4);
-  }
+	@media screen and (min-width: 768px) {
+		flex-basis: calc((100% - 1 * 30px) / 2);
+	}
+	@media screen and (min-width: 1200px) {
+		flex-basis: calc((100% - 3 * 30px) / 4);
+	}
 }
 
 .features__thumb {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
-  height: 120px;
-  margin-bottom: 30px;
+	height: 120px;
+	margin-bottom: 30px;
 
-  border-radius: 4px;
-  background-color: var(--light-bg-color);
+	border-radius: 4px;
+	background-color: var(--light-bg-color);
 }
 
 .features__title {
-  margin-bottom: 10px;
+	margin-bottom: 10px;
 
-  @include fonts(inherit, var(--title-color), false, calc(16 / 14), inherit);
+	@include fonts(inherit, var(--title-color), false, calc(16 / 14), inherit);
 
-  text-transform: uppercase;
-  @media screen and (max-width: 767.98px) {
-    text-align: center;
-  }
+	text-transform: uppercase;
+	@media screen and (max-width: 767.98px) {
+		text-align: center;
+	}
 }
 
 .features__text {
-  line-height: 1.71;
+	line-height: 1.71;
 }

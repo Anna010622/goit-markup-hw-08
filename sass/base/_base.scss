@@ -1,9 +1,22 @@
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
+
 body {
-  font-family: var(--main-font);
-  font-size: 14px;
-  letter-spacing: 0.03em;
-  color: var(--base-text-color);
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+
+	font-family: var(--main-font);
+	font-size: 14px;
+	letter-spacing: 0.03em;
+	color: var(--base-text-color);
+}
+
+.noScroll {
+	overflow: hidden;
+}
+
+main {
+	flex-grow: 1;
 }

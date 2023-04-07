@@ -65,10 +65,28 @@ html {
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
   font-family: var(--main-font);
   font-size: 14px;
   letter-spacing: 0.03em;
   color: var(--base-text-color);
+}
+
+.noScroll {
+  overflow: hidden;
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .container {
@@ -664,9 +682,7 @@ body {
 }
 
 .card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -681,8 +697,14 @@ body {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card:hover {
-  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(114, 63, 63, 0.16);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(114, 63, 63, 0.16);
+}
+
+.visible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .card__thumb {
@@ -757,8 +779,9 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
+  padding: 15px;
   background-color: rgba(0, 0, 0, 0.2);
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
@@ -768,14 +791,14 @@ body {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  overflow: scroll;
+  overflow-y: scroll;
 }
 .backdrop--is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
 }
-@media screen and (min-height: 609px) {
+@media screen and (min-height: 635px) {
   .backdrop {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -785,8 +808,8 @@ body {
 
 .modal {
   position: relative;
-  width: 450px;
-  min-height: 581px;
+  max-width: 450px;
+  min-height: 600px;
   padding: 40px;
   background: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1008,8 +1031,7 @@ body {
 }
 
 .modal-form__link {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
   text-underline-position: under;
   color: var(--accent-color);
   -webkit-transition-property: outline-color;

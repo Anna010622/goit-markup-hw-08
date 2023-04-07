@@ -1,57 +1,57 @@
 .clients {
-  @include section;
-  @media screen and(min-width:1200px) {
-    @include section(94px, 94px);
-  }
+	@include section;
+	@media screen and (min-width: 1200px) {
+		@include section(94px, 94px);
+	}
 }
 .clients__section-title {
-  margin-bottom: 30px;
+	margin-bottom: 30px;
 
-  @media screen and (min-width: 1200px) {
-    margin-bottom: 50px;
-  }
+	@media screen and (min-width: 1200px) {
+		margin-bottom: 50px;
+	}
 }
 .clients__list {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
+	display: flex;
+	gap: 30px;
+	flex-wrap: wrap;
 }
 .clients__element {
-  flex-basis: calc((100% - 1 * 30px) / 2);
+	flex-basis: calc((100% - 1 * 30px) / 2);
 
-  @media screen and(min-width:768px) {
-    flex-basis: calc((100% - 2 * 30px) / 3);
-  }
-  @media screen and(min-width: 1200px) {
-    flex-basis: calc((100% - 5 * 30px) / 6);
-  }
+	@media screen and (min-width: 768px) {
+		flex-basis: calc((100% - 2 * 30px) / 3);
+	}
+	@media screen and (min-width: 1200px) {
+		flex-basis: calc((100% - 5 * 30px) / 6);
+	}
 }
 
 .clients__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
-  height: 92px;
+	height: 92px;
 
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
-  fill: #afb1b8;
+	border: 1px solid #afb1b8;
+	border-radius: 4px;
+	fill: #afb1b8;
 
-  @include transition(border-color);
+	@include transition(border-color);
 
-  &:hover,
-  &:focus {
-    border-color: var(--accent-color);
-  }
+	&:hover,
+	&:focus {
+		border-color: var(--accent-color);
+	}
 }
 .clients__icon {
-  fill: #afb1b8;
+	fill: #afb1b8;
 
-  @include transition(fill);
+	@include transition(fill);
 
-  .clients__link:hover &,
-  .clients__link:focus & {
-    fill: var(--accent-color);
-  }
+	.clients__link:hover &,
+	.clients__link:focus & {
+		fill: var(--accent-color);
+	}
 }

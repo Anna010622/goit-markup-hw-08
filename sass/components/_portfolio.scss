@@ -1,65 +1,65 @@
 .portfolio {
-  @include section;
-  @media screen and(min-width:1200px) {
-    @include section(94px, 94px);
-  }
+	@include section;
+	@media screen and (min-width: 1200px) {
+		@include section(94px, 94px);
+	}
 }
 .portfolio__list {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 15px;
-  column-gap: 8px;
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: 15px;
+	column-gap: 8px;
 
-  margin-bottom: 40px;
+	margin-bottom: 40px;
 
-  @media screen and(min-width: 768px) {
-    justify-content: center;
-    margin-bottom: 30px;
-  }
+	@media screen and (min-width: 768px) {
+		justify-content: center;
+		margin-bottom: 30px;
+	}
 
-  @media screen and(min-width: 1200px) {
-    justify-content: center;
-    margin-bottom: 50px;
-  }
+	@media screen and (min-width: 1200px) {
+		justify-content: center;
+		margin-bottom: 50px;
+	}
 }
 
 .portfolio__button {
-  padding: 6px 22px;
-  min-width: 73px;
+	padding: 6px 22px;
+	min-width: 73px;
 
-  font-family: inherit;
-  @include fonts(16px, var(--title-color), 500, calc(26 / 16), 0.03em);
+	font-family: inherit;
+	@include fonts(16px, var(--title-color), 500, calc(26 / 16), 0.03em);
 
-  background-color: var(--light-bg-color);
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+	background-color: var(--light-bg-color);
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
 
-  @include transition(color, background-color, box-shadow);
+	@include transition(color, background-color, box-shadow);
 
-  &--current,
-  &:hover,
-  &:focus {
-    color: var(--main-light-color);
+	&--current,
+	&:hover,
+	&:focus {
+		color: var(--main-light-color);
 
-    background-color: var(--accent-color);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-      0px 2px 2px rgba(0, 0, 0, 0.12);
-  }
+		background-color: var(--accent-color);
+		box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+			0px 2px 2px rgba(0, 0, 0, 0.12);
+	}
 }
 
 .portfolio__cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
 }
 .portfolio__card {
-  flex-basis: 100%;
+	flex-basis: 100%;
 
-  @media screen and(min-width:768px) {
-    flex-basis: calc((100% - 1 * 30px) / 2);
-  }
-  @media screen and(min-width: 1200px) {
-    flex-basis: calc((100% - 2 * 30px) / 3);
-  }
+	@media screen and (min-width: 768px) {
+		flex-basis: calc((100% - 1 * 30px) / 2);
+	}
+	@media screen and (min-width: 1200px) {
+		flex-basis: calc((100% - 2 * 30px) / 3);
+	}
 }

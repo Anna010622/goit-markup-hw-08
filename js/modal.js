@@ -1,14 +1,32 @@
-(() => {
-  const refs = {
-    openModalBtn: document.querySelector('[data-modal-open]'),
-    closeModalBtn: document.querySelector('[data-modal-close]'),
-    modal: document.querySelector('[data-modal]'),
-  };
+const openModalBtn = document.querySelector('[data-modal-open]');
+const closeModalBtn = document.querySelector('[data-modal-close]');
+const modal = document.querySelector('[data-modal]');
+const body = document.querySelector('body');
 
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
+openModalBtn.addEventListener('click', onOpenModalBtnClick);
+closeModalBtn.addEventListener('click', onCloseModalBtnClick);
+modal.addEventListener('click', onBackdropClick);
 
-  function toggleModal() {
-    refs.modal.classList.toggle('backdrop--is-hidden');
-  }
-})();
+function onOpenModalBtnClick() {
+	window.addEventListener('keydown', onEscKeyPress);
+	body.classList.add('noScroll');
+	modal.classList.remove('backdrop--is-hidden');
+}
+
+function onCloseModalBtnClick() {
+	window.removeEventListener('keydown', onEscKeyPress);
+	body.classList.remove('noScroll');
+	modal.classList.add('backdrop--is-hidden');
+}
+
+function onBackdropClick(event) {
+	if (event.currentTarget === event.target) {
+		onCloseModalBtnClick();
+	}
+}
+
+function onEscKeyPress(event) {
+	if (event.code === 'Escape') {
+		onCloseModalBtnClick();
+	}
+}
